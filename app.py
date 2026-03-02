@@ -20,17 +20,8 @@ st.set_page_config(
     }
 )
 
-GTM_ID = "GTM-WQP3LQ5P" #
-gtm_js = f"""
-    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
-    new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    }})(window,document,'script','dataLayer','{GTM_ID}');</script>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    """
-st.markdown(gtm_js, unsafe_allow_html=True) #
+# 구글 서치 콘솔 인증용 메타 태그 (HTML 태그 방식)
+st.markdown('<meta name="google-site-verification" content="MW-r3ZKb4oNI8jZ" />', unsafe_allow_html=True)
 
 # 🎨 모바일 최적화 및 캡처 영역 설정을 위한 CSS
 st.markdown("""
