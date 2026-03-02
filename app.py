@@ -8,6 +8,9 @@ import streamlit.components.v1 as components # 자바스크립트 실행용
 # config.py에서 설정 불러오기
 from config import US_KOR_NAMES, CRYPTO_MAP
 
+# 구글 서치 콘솔 인증용 메타 태그 (HTML 태그 방식)
+st.markdown('<meta name="google-site-verification" content="MW-r3ZKb4oNI8jZ" />', unsafe_allow_html=True)
+
 # 1. 웹 페이지 설정
 st.set_page_config(
     page_title="주식 코인 수익률 타임머신 | 수익률 계산기", # 검색에 걸릴 제목
@@ -20,8 +23,7 @@ st.set_page_config(
     }
 )
 
-# 구글 서치 콘솔 인증용 메타 태그 (HTML 태그 방식)
-st.markdown('<meta name="google-site-verification" content="MW-r3ZKb4oNI8jZ" />', unsafe_allow_html=True)
+
 
 # 🎨 모바일 최적화 및 캡처 영역 설정을 위한 CSS
 st.markdown("""
